@@ -9,3 +9,4 @@ drp_dwn_insurance = {'xpath': "//span[text()='Insurance']/parent::li[@class='nav
 lnk_two_wheeler_insurance = {'link_text': "Two Wheeler Insurance"}
 btn_view_quotes = {'xpath': "//button[@title='View Quotes']"}
 id_two_wheeler_insurance = {'xpath': "//a[@id='twowheeler-to-product']"}
+lnk_insurance = {'link_text': "{}"}

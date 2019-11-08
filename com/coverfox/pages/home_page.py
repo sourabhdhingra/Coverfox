@@ -1,7 +1,7 @@
 from com.coverfox import config
 import com.coverfox.resources.home_pg_locators as locators
 from com.coverfox.utilities.ui_actions import UIActions
-
+from com.coverfox.utilities.common_ops import format_locator
 
 
 class HomePage:
@@ -25,7 +25,7 @@ class HomePage:
         else:
             return False
 
-    def open_two_wheelers_insurance(self):
+    def open_insurance(self, insurance):
         self._ui.move_to(locators.drp_dwn_insurance)
-        self._ui.click(locators.id_two_wheeler_insurance)
+        self._ui.click(format_locator(locators.lnk_insurance, insurance))
 
