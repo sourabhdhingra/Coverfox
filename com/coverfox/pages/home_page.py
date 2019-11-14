@@ -1,16 +1,16 @@
-from com.coverfox import config
+from com.coverfox.config import Config
 import com.coverfox.resources.home_pg_locators as locators
 from com.coverfox.utilities.ui_actions import UIActions
 from com.coverfox.utilities.common_ops import format_locator
 
 
 class HomePage:
-    __home_url = config.home_url
-    __browser = config.browsers[0]
-    _implicit_timeout = config.implicit_timeout
-    _explicit_timeout = config.explicit_timeout
+    __home_url = Config.home_url
+    _implicit_timeout = Config.implicit_timeout
+    _explicit_timeout = Config.explicit_timeout
 
-    def __init__(self):
+    def __init__(self, browser=Config.default_browser):
+        self.__browser = browser
         self._ui = UIActions(self.__browser, self._implicit_timeout, self._explicit_timeout)
 
     @property
